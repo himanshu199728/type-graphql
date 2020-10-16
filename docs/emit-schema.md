@@ -12,7 +12,7 @@ const schema = await buildSchema({
   // automatically create `schema.gql` file with schema definition in project's working directory
   emitSchemaFile: true,
   // or create the file with schema in selected path
-  emitSchemaFile: path.resolve(__dirname, "__snapshots__/schema/schema.gql"),
+  emitSchemaFile: path.resolve(__dirname, "__snapshots__/schema/schema.gql"),  // or set this meta data as true
   // or pass a config object
   emitSchemaFile: {
     path: __dirname + "/schema.gql",
@@ -32,3 +32,5 @@ hypotheticalFileWatcher.watch("./src/**/*.{resolver,type,input,arg}.ts", async (
   await emitSchemaDefinitionFile("/path/to/folder/schema.gql", schema);
 });
 ```
+
+
